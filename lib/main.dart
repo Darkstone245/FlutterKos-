@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
     await FlutterBluePlus.stopScan();
     try {
-      await device.connect();
+      await device.connect(license: License.free);
     } catch (e) {
       debugPrint('Connect error: $e');
     } finally {
