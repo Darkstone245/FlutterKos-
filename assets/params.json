@@ -1,0 +1,8 @@
+{
+  "trip":128.0,
+  "throttleMax":3200,
+  "throttleOffset":800,
+  "deviceName": "EBiCS",
+  "regenLevel": 7,
+  "assistLevel": 1
+}
