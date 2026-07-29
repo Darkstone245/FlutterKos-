@@ -31,11 +31,16 @@ jobs:
         run: flutter analyze
         continue-on-error: true   # Build nicht abbrechen, nur Hinweise ausgeben
 
-      - name: iOS-Build ohne Signierung
+      - name: Simulator build
         run: |
           cd ios
           pod install
           cd ..
+          flutter build ios --simulator
+        continue-on-error: true
+
+      - name: iOS-Build ohne Signierung
+        run: |
           flutter build ios --release --no-codesign
 
         # --no-codesign: baut die App, ohne ein Apple-Entwicklerzertifikat zu benötigen.
