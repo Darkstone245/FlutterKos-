@@ -33,7 +33,9 @@ jobs:
 
       - name: iOS-Build ohne Signierung
         run: |
+          cd ios
           pod install
+          cd ..
           flutter build ios --release --no-codesign
 
         # --no-codesign: baut die App, ohne ein Apple-Entwicklerzertifikat zu benötigen.
