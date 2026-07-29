@@ -43,6 +43,7 @@ post_install do |installer|
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
       # Works around "Command PhaseScriptExecution failed" on recent Xcode versions.
       config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      config.build_settings['DEVELOPMENT_TEAM'] = 'A1B2C3D4E5' 
     end
   end
 end
