@@ -32,7 +32,10 @@ jobs:
         continue-on-error: true   # Build nicht abbrechen, nur Hinweise ausgeben
 
       - name: iOS-Build ohne Signierung
-        run: flutter build ios --release --no-codesign
+        run: |
+          pod install
+          flutter build ios --release --no-codesign
+
         # --no-codesign: baut die App, ohne ein Apple-Entwicklerzertifikat zu benötigen.
         # WICHTIG: Diese IPA ist NICHT signiert und lässt sich daher NICHT auf einem
         # echten iPhone installieren. iOS verweigert grundsätzlich unsignierte Apps.
