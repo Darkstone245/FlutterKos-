@@ -11,7 +11,7 @@ import 'package:path_provider/path_provider.dart';
 
 import 'LEV_Pages.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.lightBlue,
         ),
-        home: const MyHomePage(title: 'v.01'),
+        home: MyHomePage(title: 'v.01'),
       );
 }
 
