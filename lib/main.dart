@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
     await FlutterBluePlus.stopScan();
     try {
-      await device.connect(license: License.free);
+      await device.connect(license: License.nonprofit);
     } catch (e) {
       debugPrint('Connect error: $e');
     } finally {
@@ -235,7 +235,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                   LP.deviceName = device.platformName;
                   await FlutterBluePlus.stopScan();
                   try {
-                    await device.connect();
+                    await device.connect(license: License.nonprofit);
                   } catch (e) {
                     debugPrint('Connect error: $e');
                   } finally {
